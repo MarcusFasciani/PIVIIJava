@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk7
+deploy:
+  provider: heroku
+  api_key:
+    secure: 065bf742-e4da-4681-b1f4-5f8d97de6e9b
+  app: shielded-noteb-7878
+  on:
+    repo: AndersonSFerreira/pi_7

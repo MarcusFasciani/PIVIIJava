@@ -1,0 +1,33 @@
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID"
+	version="2.5">
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>Medico</servlet-name>
+		<servlet-class>com.controller.MedicoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping id="ServletMapping_1434898570065">
+		<servlet-name>Medico</servlet-name>
+		<url-pattern>/MedicoServlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+	    <welcome-file>MedicoServlet</welcome-file>
+	</welcome-file-list>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<scripting-invalid>false</scripting-invalid>
+		</jsp-property-group>
+		<jsp-property-group>
+			<url-pattern>*.tag</url-pattern>
+			<scripting-invalid>false</scripting-invalid>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
