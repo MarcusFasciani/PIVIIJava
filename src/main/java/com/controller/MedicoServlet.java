@@ -17,16 +17,25 @@ public class MedicoServlet extends HttpServlet
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
 	{
 		MedicoApplication jsa = new MedicoApplication();
-		Medico j = new Medico();
 		String id = request.getParameter("_id");
+		String nome = request.getParameter("nome");
+		String salario = request.getParameter("salario");
+		String especializacao = request.getParameter("especializacao");
+		
 		
 		StringBuffer mensagem = new StringBuffer();
 		
 		try
 		{
-			boolean valido = jsa.validar(j.getNome(),  j.getSalario() + "", j.getEspecializacao(), mensagem);
+			boolean valido = jsa.validar(nome, salario, especializacao, mensagem);
 			if(valido)
-				mensagem.append(jsa.create(j));
+			{
+				Medico m = new Medico();
+				m.setNome(nome);
+				m.setEspecializacao(especializacao);
+				m.setSalario(Integer.parseInt(salario));
+				mensagem.append(jsa.create(m));
+			}
 			response.setContentType("text/html");
 			List<Medico> cl = jsa.todos();
 			request.setAttribute("medicos", cl);
