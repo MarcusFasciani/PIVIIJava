@@ -17,7 +17,7 @@ public class MedicoTest
 		MedicoApplication caminhaoApplication = new MedicoApplication();
 		
 		Medico m = new Medico();
-		
+		//Mudanças na Classe teste
 		m.setNome("");
 		m.setEspecializacao("Ortopedista");
 		m.setSalario(10000);
