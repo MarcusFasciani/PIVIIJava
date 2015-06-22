@@ -25,7 +25,7 @@
 				<th>Codigo</th>
 				<th>Nome</th>
 				<th>Salario</th>
-				<th>Especialização</th>
+				<th>Especializacao</th>
 			</tr>
 			<c:forEach items="${medicos}" var="medico">
 			    <tr>      
