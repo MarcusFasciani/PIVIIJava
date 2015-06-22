@@ -28,10 +28,9 @@ public class MedicoServlet extends HttpServlet
 			if(valido)
 				mensagem.append(jsa.create(j));
 			response.setContentType("text/html");
-			 
 			List<Medico> cl = jsa.todos();
 			request.setAttribute("medicos", cl);
-			mensagem = mensagem.equals(null) ? mensagem.append("Salvo com sucesso!") : mensagem;
+			mensagem = mensagem.equals("") ? mensagem.append("Salvo com sucesso!") : mensagem;
 			request.setAttribute("mensagem", mensagem);
 			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 		}
