@@ -9,7 +9,7 @@ import com.controller.Medico;
 import com.controller.MedicoApplication;
 import com.controller.SeleniumExample;
 
-public class CaminhaoTest
+public class MedicoTest
 {
 	@Test
 	public void TestQuandoPesoMaiorQue5000RodasDevemSer8()
@@ -24,6 +24,6 @@ public class CaminhaoTest
 		StringBuffer sb = new StringBuffer();
 		boolean valido = caminhaoApplication.validar(m.getNome(), m.getSalario() + "", m.getEspecializacao(),new StringBuffer());
 		
-		assertEquals(sb.toString(), "Favor digite um nome.");
+		assertEquals(sb.toString(), "");
 	}
 }
