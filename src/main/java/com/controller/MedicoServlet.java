@@ -24,9 +24,9 @@ public class MedicoServlet extends HttpServlet
 		
 		try
 		{
-			jsa.validar(j.getNome(),  j.getSalario() + "", j.getEspecializacao(), mensagem);
-			
-			mensagem.append(jsa.create(j));
+			boolean valido = jsa.validar(j.getNome(),  j.getSalario() + "", j.getEspecializacao(), mensagem);
+			if(valido)
+				mensagem.append(jsa.create(j));
 			response.setContentType("text/html");
 			 
 			List<Medico> cl = jsa.todos();
