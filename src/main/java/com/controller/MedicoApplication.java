@@ -84,7 +84,7 @@ public class MedicoApplication
 	{
 		if(salario.equals(""))
 		{
-			mensagem.append("Não é possível Médico ganhar 0");
+			mensagem.append("Nao e possivel Medico ganhar 0");
 			return false;
 		}
 		
