@@ -26,4 +26,19 @@ public class MedicoTest
 		
 		assertEquals(sb.toString(), "");
 	}
+	@Test
+	public void TestCriando()
+	{
+		MedicoApplication medicoApplication = new MedicoApplication();
+		
+		Medico m = new Medico();
+		m.setEspecializacao("Ortopedista");
+		m.setNome("Marcus");
+		m.setSalario(1000);
+		List<Medico> medicosAntes = medicoApplication.todos();
+		medicoApplication.create(m);
+		List<Medico> medicosDepois = medicoApplication.todos();
+		assertEquals(medicosAntes.size() + 1 ,medicosDepois.size());
+		
+	}
 }
