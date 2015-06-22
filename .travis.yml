@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk7
+deploy:
+  provider: heroku
+  api_key: 
+    secure: 0e7b2d62-0078-4ff4-a8dc-792a11892ba6
+  app: piviijava
+  on:
+    repo: MarcusFasciani/PIVIIJava
