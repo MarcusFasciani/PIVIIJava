@@ -155,7 +155,7 @@ public class MedicoTest
 	}
 	
 	
-	//Teste com selenium
+	//Teste com selenium aqui
 	private static WebDriver driver;
 	// Método que inicia tudo que for necessário para o teste
 	// Cria uma instância do navegador e abre a página inicial da DevMedia.
