@@ -19,11 +19,7 @@ public class MedicoApplication
     {
     	StringBuffer mensagem = new StringBuffer();
     	try
-<<<<<<< HEAD
-    	{
-=======
     	{  //Conexão Mongo
->>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
     		if(validar(j.getNome(), j.getSalario() + "", j.getEspecializacao(),mensagem))
     		{
 	            MongoClientURI uri = new MongoClientURI("mongodb://marcusfasciani:senha123@ds043002.mongolab.com:43002/marcusfasciani");
@@ -86,25 +82,25 @@ public class MedicoApplication
 	
 	public boolean validar(String nome, String salario, String especializacao ,StringBuffer mensagem)
 	{
-		if(salario.equals(""))
+		if(salario == null || salario.equals(""))
 		{
-<<<<<<< HEAD
-			mensagem.append("Não é possível Médico ganhar 0");
-=======
-			mensagem.append("Nao e possivel Medico ganhar 0");
->>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
+			mensagem.append("Favor preencher o campo salario.");
 			return false;
 		}
 		
-		else if(especializacao.equals(""))
+		else if(especializacao == null || especializacao.equals(""))
 		{
 			mensagem.append("Favor digite uma especializacao.");
 			return false;
 		}
-		
-		else if(nome.equals(""))
+		else if(nome == null || nome.equals(""))
 		{
-			mensagem.append("Favor digite um nome.");
+			mensagem.append("Favor digitar o nome do médico.");
+			return false;
+		}
+		else if(Integer.parseInt(salario) > 100000)
+		{
+			mensagem.append("Salario de médico não pode ser acima de 100000");
 			return false;
 		}
 		else
