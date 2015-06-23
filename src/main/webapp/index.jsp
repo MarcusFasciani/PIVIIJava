@@ -25,11 +25,8 @@
 				<th>Codigo</th>
 				<th>Nome</th>
 				<th>Salario</th>
-<<<<<<< HEAD
 				<th>Especialização</th>
-=======
 				<th>Especializacao</th>
->>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
 			</tr>
 			<c:forEach items="${medicos}" var="medico">
 			    <tr>      
@@ -43,8 +40,5 @@
 	</div>
 
 	</body>
-<<<<<<< HEAD
 </html>
-=======
 </html>
->>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
