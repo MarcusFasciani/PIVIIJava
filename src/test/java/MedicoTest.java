@@ -17,7 +17,11 @@ public class MedicoTest
 		MedicoApplication caminhaoApplication = new MedicoApplication();
 		
 		Medico m = new Medico();
+<<<<<<< HEAD
 		
+=======
+		//Mudanças na Classe teste
+>>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
 		m.setNome("");
 		m.setEspecializacao("Ortopedista");
 		m.setSalario(10000);
@@ -26,4 +30,23 @@ public class MedicoTest
 		
 		assertEquals(sb.toString(), "");
 	}
+<<<<<<< HEAD
 }
+=======
+	@Test
+	public void TestCriando()
+	{
+		MedicoApplication medicoApplication = new MedicoApplication();
+		
+		Medico m = new Medico();
+		m.setEspecializacao("Ortopedista");
+		m.setNome("Marcus");
+		m.setSalario(1000);
+		List<Medico> medicosAntes = medicoApplication.todos();
+		medicoApplication.create(m);
+		List<Medico> medicosDepois = medicoApplication.todos();
+		assertEquals(medicosAntes.size() + 1 ,medicosDepois.size());
+		
+	}
+}
+>>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7

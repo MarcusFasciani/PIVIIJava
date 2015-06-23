@@ -8,6 +8,10 @@ public class Medico {
 	private Integer salario;
 	private String especializacao;
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
 	public Medico(){}
 
 	public ObjectId get_id() {

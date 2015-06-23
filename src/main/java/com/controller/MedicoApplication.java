@@ -19,7 +19,11 @@ public class MedicoApplication
     {
     	StringBuffer mensagem = new StringBuffer();
     	try
+<<<<<<< HEAD
     	{
+=======
+    	{  //Conexão Mongo
+>>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
     		if(validar(j.getNome(), j.getSalario() + "", j.getEspecializacao(),mensagem))
     		{
 	            MongoClientURI uri = new MongoClientURI("mongodb://marcusfasciani:senha123@ds043002.mongolab.com:43002/marcusfasciani");
@@ -84,7 +88,11 @@ public class MedicoApplication
 	{
 		if(salario.equals(""))
 		{
+<<<<<<< HEAD
 			mensagem.append("Não é possível Médico ganhar 0");
+=======
+			mensagem.append("Nao e possivel Medico ganhar 0");
+>>>>>>> eb613a4157fe1eb8666acc29c0199dfb38bec9d7
 			return false;
 		}
 		
