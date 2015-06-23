@@ -155,46 +155,4 @@ public class MedicoTest
 	}
 	
 	
-	//Teste com selenium aqui
-	private static WebDriver driver;
-	// Método que inicia tudo que for necessário para o teste
-	// Cria uma instância do navegador e abre a página inicial da DevMedia.
-	@BeforeClass
-	public static void setUpTest(){
-		driver = new FirefoxDriver();
-		driver.get("http://piviijava.herokuapp.com/");
-	}
-	
-	// Método que finaliza o teste, fechando a instância do WebDriver.    
-	@AfterClass
-	public static void tearDownTest(){
-		driver.quit();
-	}
-	
-	@Test
-	public void testaTituloDaPagina(){
-		WebElement mensagem = driver.findElement(By.name("mensagem"));
-		assertEquals("", mensagem.getText());
-	}
-	
-	// Método que testa o login no site DevMedia.
-	@Test
-	public void testSeleniumJUnit() {
-
-	// Instancia um novo objeto do tipo "WebElement", e passa como parâmetro
-	// um elemento da tela cujo valor do atributo "name" seja igual a "usuario".
-	WebElement nome = driver.findElement(By.name("nome"));
-	WebElement salario = driver.findElement(By.name("salario"));
-	WebElement especializacao = driver.findElement(By.name("especializacao"));
-	
-	// Insere dados no elemento "senha".
-	nome.sendKeys("testSeleniumJUnit");
-	salario.sendKeys("123456");
-	especializacao.sendKeys("Ortopedista");
-	
-	// Clica no botão "OK" e submete os dados para concluir o login.
-		driver.findElement(By.id("buscar")).click();
-	}
-
-	
 }
